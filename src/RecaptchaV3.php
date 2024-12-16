@@ -114,7 +114,7 @@ class RecaptchaV3
     /**
      * @param $action
      */
-    public function field($action, $name = 'g-recaptcha-response', $nonce = null)
+    public function field($action, $name = 'g-recaptcha-response', $nonce = false)
     {
         $fieldId = uniqid($name . '-', false);
         $html = '<input type="hidden" name="' . $name . '" id="' . $fieldId . '">';
