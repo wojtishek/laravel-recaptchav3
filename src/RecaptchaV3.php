@@ -114,12 +114,13 @@ class RecaptchaV3
     /**
      * @param $action
      */
-    public function field($action, $name = 'g-recaptcha-response')
+    public function field($action, $name = 'g-recaptcha-response', $nonce = null)
     {
         $fieldId = uniqid($name . '-', false);
         $html = '<input type="hidden" name="' . $name . '" id="' . $fieldId . '">';
-        $html .= "<script>
-  grecaptcha.ready(function() {
+        $html .= $nonce ? "<script nonce='" . $nonce . "'>" : "<script>";
+        $html .= "
+        grecaptcha.ready(function() {
       grecaptcha.execute('" . $this->sitekey . "', {action: '" . $action . "'}).then(function(token) {
          document.getElementById('" . $fieldId . "').value = token;
       });

@@ -1,5 +1,5 @@
 {
-    "name": "josiasmontag/laravel-recaptchav3",
+    "name": "wojtishek/laravel-recaptchav3",
     "description": "Recaptcha V3 for Laravel package",
     "keywords": [
         "captcha",
@@ -7,12 +7,12 @@
         "laravel",
         "php"
     ],
-    "homepage": "https://github.com/josiasmontag/laravel-recaptchav3",
+    "homepage": "https://github.com/wojtishek/laravel-recaptchav3",
     "license": "MIT",
     "authors": [
         {
-            "name": "Josias Montag",
-            "email": "josias@montag.info"
+            "name": "Vojtěch Kaizr",
+            "email": "wojtishek@gmail.com"
         }
     ],
     "require": {
